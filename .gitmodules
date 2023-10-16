@@ -1,0 +1,3 @@
+[submodule "myResetCSS"]
+	path = myResetCSS
+	url = git@github.com:dstein26/myResetCSS.git
