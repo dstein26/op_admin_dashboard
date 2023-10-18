@@ -17,6 +17,8 @@
     --background-color: var(--c1-50);
     --hightlight-color: var(--c1-200);
     --border-color: var(--c1-700);
+    
+    --sidebar-transition-time: 0.5s;
 }
 
 html, body
@@ -49,9 +51,19 @@ header
     height:5em;
 }
 
+#display-area
+{
+    padding:10px 0 0 10px;
+}
+
+content li
+{
+    margin:0 0 200px 0;
+}
+
 #header-block
 {
-    height:5em;
+    height:calc(5em + 4px);
 }
 
 #sidebar
@@ -69,9 +81,9 @@ header
 
     max-width: 100%;
     transition-property: max-width;
-    transition-duration: 0.5s;
-    transition-delay: 0.1s;
-    transition-timing-function: ease-out;
+    transition-duration: var(--sidebar-transition-time);
+    transition-delay: var(--sidebar-transition-time);
+    transition-timing-function: ease-in-out;
 }
 
 #sidebar > img
@@ -102,14 +114,9 @@ header
     overflow: hidden;
 
     transition-property: max-width;
-    transition-duration: 0.6s;
+    transition-duration: var(--sidebar-transition-time);
     transition-delay: 0;
     transition-timing-function: ease-out;
-}
-
-content li
-{
-    margin:0 0 200px 0;
 }
 
 .sidebar-content
