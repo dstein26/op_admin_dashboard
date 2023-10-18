@@ -20,21 +20,21 @@ function expandSidebar()
     {
         for(let ii = 0; ii < listItems.length; ii++)
         {
-            listItems[ii].style.transitionDelay = sidebarTransitionTime;
             listItems[ii].style.maxWidth = null;
+            listItems[ii].style.transitionDelay = null;
         }
-        sidebar.style.transitionDelay = "0s";
         sidebar.style.maxWidth = null;
+        sidebar.style.transitionDelay = "0s";
     }
     else    // Compressing the sidebar
     {
         for(let ii = 0; ii < listItems.length; ii++)
         {
-            listItems[ii].style.transitionDelay = null;
             listItems[ii].style.maxWidth = itemCollapsedWidth;
+            listItems[ii].style.transitionDelay = sidebarTransitionTime;
         }
-        sidebar.style.transitionDelay = null;
         sidebar.style.maxWidth = sidebarCollapsedWidth;
+        sidebar.style.transitionDelay = null;
     }
 
     transitionTimer = new Date().getTime();
