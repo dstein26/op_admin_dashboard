@@ -22,15 +22,59 @@
     --sidebar-transition-time: 0.5s;
 
     --header-height: 5em;
-    --display-padding: calc(var(--header-height) + 15px);
 }
 
 html, body
 {
+    height: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     background-color: var(--background-color);
+}
+
+#dashboard
+{
+    display:grid;
+    grid-template: 'sidebar header'
+                    'sidebar display';
+    grid-template-columns: auto 1fr;
+    grid-template-rows: var(--header-height) calc(100% - var(--header-height));
+    height:100%;
+    
+}
+
+#sidebar
+{
+    display:flex;
+    flex-direction: column;
+    grid-area: sidebar;
+    width: auto;
+    padding:10px 0 5px 1%;
+    box-sizing: border-box;
+    background-color: var(--hightlight-color);
+    color: var(--text-on-highlight-color);
+    z-index: 1;
+    overflow: hidden;
+
+    --header-fs: 2rem;
+    --button-fs: 1rem;
+
+    max-width: 100%;
+    transition-property: max-width;
+    transition-duration: var(--sidebar-transition-time);
+    transition-delay: var(--sidebar-transition-time);
+    transition-timing-function: ease-in-out;
+}
+
+header
+{
+    /*
+    position: fixed;
+    */
+    grid-area: header;
+    width:100%;
+    background-color: var(--hightlight-color);
+    color:var(--text-on-highlight-color);
 }
 
 main
@@ -41,62 +85,18 @@ main
     grid-area:display;
 }
 
-header
-{
-    /*
-    position: fixed;
-    */
-    grid-area: header;
-    width:100%;
-    border: 2px solid var(--border-color);
-    background-color: var(--hightlight-color);
-    color:var(--text-on-highlight-color);
-    height:var(--header-height);
-}
 
-#dashboard
-{
-    display:grid;
-    grid-template: 'sidebar header'
-                    'sidebar display';
-    grid-template-columns: auto 1fr;
-}
 
 #display-area
 {
     display:flex;
     flex-wrap: wrap;
+    height: 100%;
     
+    /*
     padding:var(--display-padding) 0 0 10px;
-}
-
-#sidebar
-{
-    display:flex;
-    flex-direction: column;
-    /*
-    position: fixed;
-    left:0;
     */
-    grid-area: sidebar;
-    height:100%;
-    width: 15em;
-    padding:10px 0 5px 1%;
-    box-sizing: border-box;
-    border: 2px solid var(--border-color);
-    background-color: var(--hightlight-color);
-    color: var(--text-on-highlight-color);
-    z-index: 1;
-    overflow: hidden;
-    /*
-    visibility: hidden;
-    */
-
-    max-width: 100%;
-    transition-property: max-width;
-    transition-duration: var(--sidebar-transition-time);
-    transition-delay: var(--sidebar-transition-time);
-    transition-timing-function: ease-in-out;
+    overflow: scroll;
 }
 
 #sidebar > img
@@ -105,18 +105,28 @@ header
     width: 2.5em;
 }
 
-#sidebar-header h1
+#sidebar-header
 {
-    margin-left:1.2em;
+    display: block;
+    overflow: hidden;
+    margin-left:1rem;
     text-shadow: 2px 2px 3px var(--c1-950);
+    font-size: var(--header-fs);
+
+    > h1
+    {
+        font-size: var(--header-fs);
+        font-weight: bold;
+    }
 }
 
-.group-1
+
+#sidebar > .sidebar-content > :first-child
 {
     flex: 1;
 }
 
-.collapse
+.sb-collapse
 {
     max-width:100%;
     overflow: hidden;
@@ -136,34 +146,32 @@ header
     margin:0;
 }
 
-.sidebar-group
-{
-    /*margin: 20px 0 20px 0;
-    box-sizing:content-box; */
-}
-
 .sidebar-button
 {
-    display: block;
-    width:100%;
+    display: flex;
+    width:90%;
+    max-height:1.5em;
+    box-sizing: border-box;
     height:auto;
     
     text-align: left;
     border: 1px solid var(--hightlight-color);
     border-radius: 1.3em;
     box-sizing: border-box;
-    margin:5px 0 5px 0;
+    margin:5px 0 5px 1rem;
     padding: 0.2em 0;
     overflow: hidden;
     background-color: var(--hightlight-color);
+    font-size: var(--button-fs);
 }
 
 .sidebar-button > p
 {
     display: inline;
-    margin: 0 0 0 1.5em;
+    margin: 0 0 0 0em;
     font-size: larger;
-    color:white
+    color:white;
+    font-size: inherit;
 }
 
 .sidebar-button:hover
@@ -177,16 +185,16 @@ header
     }
 }
 
-.sidebar-button::before, #sidebar-header::before
+.sidebar-button::before, #sidebar-header>h1::before
 {
     display:inline-block;
-    position: absolute;
+    position: relative;
     content: var(--icon);
-    height:1.2em;
+    height:1em;
     aspect-ratio: 1/1;
-    margin-left: 5px;
     justify-content: center;
     filter:invert();
+    margin-right: 0.5rem;
 }
 
 .card
@@ -199,4 +207,12 @@ header
     border-radius: 0.5em;
     background-color: var(--background-color);
     box-shadow: 2px 2px 5px 1px black;
+    overflow: hidden;
+}
+
+.card > ul > li::before
+{
+    /*list-style:inside;*/
+    content: '🐎';
+    margin-right: 5px;
 }
