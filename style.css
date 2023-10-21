@@ -15,8 +15,9 @@
     --c1-950: #022c22;
 
     --background-color: var(--c1-50);
-    --hightlight-color: var(--c1-200);
-    --border-color: var(--c1-700);
+    --hightlight-color: var(--c1-700);
+    --border-color: var(--c1-600);
+    --text-on-highlight-color: white;
     
     --sidebar-transition-time: 0.5s;
 }
@@ -48,6 +49,7 @@ header
     width:100%;
     border: 2px solid var(--border-color);
     background-color: var(--hightlight-color);
+    color:var(--text-on-highlight-color);
     height:5em;
 }
 
@@ -68,6 +70,8 @@ content li
 
 #sidebar
 {
+    display:flex;
+    flex-direction: column;
     position: fixed;
     height:100%;
     width: 15em;
@@ -76,6 +80,7 @@ content li
     box-sizing: border-box;
     border: 2px solid var(--border-color);
     background-color: var(--hightlight-color);
+    color: var(--text-on-highlight-color);
     z-index: 1;
     overflow: hidden;
 
@@ -92,25 +97,20 @@ content li
     width: 2.5em;
 }
 
-.sidebar-content li::before
+#sidebar-header h1
 {
-    display: inline-block;
-    text-align: center;
-    content: "+";
-    background-color: var(--c1-700);
-    border-radius: 50%;
-    width: 1.5em;
-    height: 1.5em;
-    margin: 0 5px 0 0;
+    margin-left:1.2em;
+    text-shadow: 2px 2px 3px var(--c1-950);
 }
 
-.sidebar-content li
+.group-1
 {
-    background-color: var(--c1-300);
-    border-radius: 1.5em;
-    margin: 10px 3px 10px 0;
-    max-width: 100%;
-    height:1.5em;
+    flex: 1;
+}
+
+.collapse
+{
+    max-width:100%;
     overflow: hidden;
 
     transition-property: max-width;
@@ -121,7 +121,62 @@ content li
 
 .sidebar-content
 {
-    height:100%;
+    display:flex;
+    flex-direction: column;
+    flex:1;
     overflow-y: scroll;
     margin:0;
+}
+
+.sidebar-group
+{
+    /*margin: 20px 0 20px 0;
+    box-sizing:content-box; */
+}
+
+.sidebar-button
+{
+    display: block;
+    width:100%;
+    height:auto;
+    
+    text-align: left;
+    border: 1px solid var(--hightlight-color);
+    border-radius: 1.3em;
+    box-sizing: border-box;
+    margin:5px 0 5px 0;
+    padding: 0.2em 0;
+    overflow: hidden;
+    background-color: var(--hightlight-color);
+}
+
+.sidebar-button > p
+{
+    display: inline;
+    margin: 0 0 0 1.5em;
+    font-size: larger;
+    color:white
+}
+
+.sidebar-button:hover
+{
+    background-image: linear-gradient(to right, var(--c1-600), var(--c1-200));
+    border: 1px solid var(--c1-950);
+
+    > p
+    {
+        text-shadow: 2px 2px 2px var(--c1-950);
+    }
+}
+
+.sidebar-button::before, #sidebar-header::before
+{
+    display:inline-block;
+    position: absolute;
+    content: var(--icon);
+    height:1.2em;
+    aspect-ratio: 1/1;
+    margin-left: 5px;
+    justify-content: center;
+    filter:invert();
 }

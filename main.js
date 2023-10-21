@@ -1,7 +1,7 @@
 // Side-bar expansion
 const sidebar = document.getElementById("sidebar");
 const sidebarCollapsedWidth = "3.5em";
-const itemCollapsedWidth = "1.5em";
+const itemCollapsedWidth = "2em";
 const sidebarTransitionTime = "0.5s";
 
 // Toggle sidebar so it loads compacted
@@ -13,9 +13,10 @@ let transitionTimer = 0;
 
 function expandSidebar()
 {
-    listItems = sidebar.getElementsByClassName("sidebar-content")[0]
+    listItems = sidebar.getElementsByClassName("collapse");
+        /* sidebar.getElementsByClassName("sidebar-content")[0]
         .getElementsByTagName("ul")[0]
-        .getElementsByTagName("li");
+        .getElementsByTagName("li"); */
     if (sidebar.style.maxWidth) // Expanding the sidebar
     {
         for(let ii = 0; ii < listItems.length; ii++)
