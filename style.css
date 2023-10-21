@@ -38,16 +38,28 @@ main
     /*width:calc(100% - 3.5em);*/
     padding-left: 5em;
     box-sizing: border-box;
+    grid-area:display;
 }
 
 header
 {
+    /*
     position: fixed;
+    */
+    grid-area: header;
     width:100%;
     border: 2px solid var(--border-color);
     background-color: var(--hightlight-color);
     color:var(--text-on-highlight-color);
     height:var(--header-height);
+}
+
+#dashboard
+{
+    display:grid;
+    grid-template: 'sidebar header'
+                    'sidebar display';
+    grid-template-columns: auto 1fr;
 }
 
 #display-area
@@ -62,18 +74,23 @@ header
 {
     display:flex;
     flex-direction: column;
+    /*
     position: fixed;
+    left:0;
+    */
+    grid-area: sidebar;
     height:100%;
     width: 15em;
     padding:10px 0 5px 1%;
-    left:0;
     box-sizing: border-box;
     border: 2px solid var(--border-color);
     background-color: var(--hightlight-color);
     color: var(--text-on-highlight-color);
     z-index: 1;
     overflow: hidden;
+    /*
     visibility: hidden;
+    */
 
     max-width: 100%;
     transition-property: max-width;
