@@ -10,11 +10,15 @@
     </head>
     <body>
         <template id="card-template">
-            <h1><slot name="project-name">NO PROJECT NAME</slot></h1>
-            <h2>Project Details</h2>
-            <slot name="project-details">NO PROJECT DETAILS</slot>
-            <h2>Current Issues</h2>
-            <slot name="project-issues">NO CURRENT ISSUES</slot>
+            <link rel="stylesheet" href="card_style.css">
+            <div class="card">
+                
+                <slot name="project-name"><h1>NO PROJECT NAME</h1></slot>
+                <h2>Project Details</h2>
+                <slot class="details slot" name="project-details"><span>NO PROJECT DETAILS</span></slot>
+                <h2>Current Issues</h2>
+                <slot class="issues slot" name="project-issues"><span>NO CURRENT ISSUES</span></slot>
+            </div>
         </template>
 
         <div id="dashboard">
@@ -41,8 +45,8 @@
             <main>
                 <div id="display-area">
                     <project-card>
-                        <p slot="project-name">Project 1</p>
-                        <p slot="project-details">Project 1 details. Blah Blah Blah</p>
+                        <h1 slot="project-name">Project 1</h1>
+                        <span slot="project-details">Project 1 details. Blah Blah Blah</span>
                         <ul slot="project-issues">
                             <li>issue 1</li>
                             <li>issue 2</li>

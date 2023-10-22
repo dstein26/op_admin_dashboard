@@ -1,0 +1,56 @@
+@import url('myResetCSS/myReset.css');
+@import url(color.css);
+
+#card-template
+{
+    background-color: cyan;
+}
+
+.card{
+    /*background-color: var(--c1-50);*/
+    background-color: transparent;
+
+    margin:15px;
+    border: 1px solid var(--c1-800);
+    box-shadow: 1px 1px 2px 1px black;
+    border-radius:0.4rem;
+    width:20rem;
+    height:auto;
+    /*
+    max-height:40rem;
+    overflow: scroll;
+    */
+}
+
+.card:hover
+{
+    transform: scale(1.1);
+    transform-origin: top left;
+    box-shadow: 5px 5px 2px 2px black;
+}
+
+h1
+{
+    background-color: var(--c1-800);
+    color:white;
+    font-size: x-large;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+    padding: 0.5rem 5px 0.5rem 5px;
+}
+
+h2
+{
+    font-size: large;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0.5rem 0 0.5rem 0;
+    padding: 0 5px;
+}
+
+
+::slotted(p)
+{
+    background-color: pink;
+}
