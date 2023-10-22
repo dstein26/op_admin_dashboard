@@ -32,6 +32,30 @@ html, body
     background-color: var(--background-color);
 }
 
+header
+{
+    /*
+    position: fixed;
+    */
+    grid-area: header;
+    width:100%;
+    background-color: var(--hightlight-color);
+    color:var(--text-on-highlight-color);
+}
+
+main
+{
+    /*width:calc(100% - 3.5em);*/
+    padding-left: 5em;
+    box-sizing: border-box;
+    grid-area:display;
+}
+
+project-card *
+{
+    text-decoration: underline;
+}
+
 #dashboard
 {
     display:grid;
@@ -64,45 +88,17 @@ html, body
     transition-duration: var(--sidebar-transition-time);
     transition-delay: var(--sidebar-transition-time);
     transition-timing-function: ease-in-out;
-}
 
-header
-{
-    /*
-    position: fixed;
-    */
-    grid-area: header;
-    width:100%;
-    background-color: var(--hightlight-color);
-    color:var(--text-on-highlight-color);
-}
+    >img
+    {
+        height: 2.5em;
+        width: 2.5em;
+    }
 
-main
-{
-    /*width:calc(100% - 3.5em);*/
-    padding-left: 5em;
-    box-sizing: border-box;
-    grid-area:display;
-}
-
-
-
-#display-area
-{
-    display:flex;
-    flex-wrap: wrap;
-    height: 100%;
-    
-    /*
-    padding:var(--display-padding) 0 0 10px;
-    */
-    overflow: scroll;
-}
-
-#sidebar > img
-{
-    height: 2.5em;
-    width: 2.5em;
+    > .sidebar-content > :first-child
+    {
+        flex:1;
+    }
 }
 
 #sidebar-header
@@ -120,10 +116,16 @@ main
     }
 }
 
-
-#sidebar > .sidebar-content > :first-child
+#display-area
 {
-    flex: 1;
+    display:flex;
+    flex-wrap: wrap;
+    height: 100%;
+    
+    /*
+    padding:var(--display-padding) 0 0 10px;
+    */
+    overflow: scroll;
 }
 
 .sb-collapse
@@ -155,7 +157,7 @@ main
     height:auto;
     
     text-align: left;
-    border: 1px solid var(--hightlight-color);
+    border: 1px solid black; /*var(--hightlight-color);*/
     border-radius: 1.3em;
     box-sizing: border-box;
     margin:5px 0 5px 1rem;

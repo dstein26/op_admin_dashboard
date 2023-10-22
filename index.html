@@ -9,6 +9,14 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <template id="card-template">
+            <h1><slot name="project-name">NO PROJECT NAME</slot></h1>
+            <h2>Project Details</h2>
+            <slot name="project-details">NO PROJECT DETAILS</slot>
+            <h2>Current Issues</h2>
+            <slot name="project-issues">NO CURRENT ISSUES</slot>
+        </template>
+
         <div id="dashboard">
             <div id="sidebar">
                 <img src="Assets/chevron-double-right.svg" onclick="expandSidebar()">
@@ -32,369 +40,175 @@
             <header><h1>&#128513;My Header</h1></header>
             <main>
                 <div id="display-area">
-                    <div class="card">
-                        <h2>Card 1</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
+                    <project-card>
+                        <p slot="project-name">Project 1</p>
+                        <p slot="project-details">Project 1 details. Blah Blah Blah</p>
+                        <ul slot="project-issues">
+                            <li>issue 1</li>
+                            <li>issue 2</li>
+                            <li>issue 3</li>
+                            <li>issue 4</li>
+                            <li>issue 5</li>
                         </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 2</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
+                    </project-card>
+                    <project-card>
+                        <p slot="project-name">Project 2</p>
+                        <p slot="project-details">Project 2 details. Blah Blah Blah</p>
+                        <ul slot="project-issues">
+                            <li>issue 1</li>
+                            <li>issue 2</li>
+                            <li>issue 3</li>
+                            <li>issue 4</li>
+                            <li>issue 5</li>
                         </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 3</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
+                    </project-card>
+                    <project-card>
+                        <p slot="project-name">Project 3</p>
+                        <p slot="project-details">Project 3 details. Blah Blah Blah</p>
+                        <ul slot="project-issues">
+                            <li>issue 1</li>
+                            <li>issue 2</li>
+                            <li>issue 3</li>
+                            <li>issue 4</li>
+                            <li>issue 5</li>
                         </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 4</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
+                    </project-card>
+                    <project-card>
+                        <p slot="project-name">Project 4</p>
+                        <p slot="project-details">Project 4 details. Blah Blah Blah</p>
+                        <ul slot="project-issues">
+                            <li>issue 1</li>
+                            <li>issue 2</li>
+                            <li>issue 3</li>
+                            <li>issue 4</li>
+                            <li>issue 5</li>
                         </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 5</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
+                    </project-card>
+                    <project-card>
+                        <p slot="project-name">Project 5</p>
+                        <p slot="project-details">Project 5 details. Blah Blah Blah</p>
+                        <ul slot="project-issues">
+                            <li>issue 1</li>
+                            <li>issue 2</li>
+                            <li>issue 3</li>
+                            <li>issue 4</li>
+                            <li>issue 5</li>
                         </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 6</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
+                    </project-card>
+                    <project-card>
+                        <p slot="project-name">Project 6</p>
+                        <p slot="project-details">Project 6 details. Blah Blah Blah</p>
+                        <ul slot="project-issues">
+                            <li>issue 1</li>
+                            <li>issue 2</li>
+                            <li>issue 3</li>
+                            <li>issue 4</li>
+                            <li>issue 5</li>
                         </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 7</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
+                    </project-card>
+                    <project-card>
+                        <p slot="project-name">Project 7</p>
+                        <p slot="project-details">Project 7 details. Blah Blah Blah</p>
+                        <ul slot="project-issues">
+                            <li>issue 1</li>
+                            <li>issue 2</li>
+                            <li>issue 3</li>
+                            <li>issue 4</li>
+                            <li>issue 5</li>
                         </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 8</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
+                    </project-card>
+                    <project-card>
+                        <p slot="project-name">Project 8</p>
+                        <p slot="project-details">Project 8 details. Blah Blah Blah</p>
+                        <ul slot="project-issues">
+                            <li>issue 1</li>
+                            <li>issue 2</li>
+                            <li>issue 3</li>
+                            <li>issue 4</li>
+                            <li>issue 5</li>
                         </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 9</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
+                    </project-card>
+                    <project-card>
+                        <p slot="project-name">Project 9</p>
+                        <p slot="project-details">Project 9 details. Blah Blah Blah</p>
+                        <ul slot="project-issues">
+                            <li>issue 1</li>
+                            <li>issue 2</li>
+                            <li>issue 3</li>
+                            <li>issue 4</li>
+                            <li>issue 5</li>
                         </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 10</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
+                    </project-card>
+                    <project-card>
+                        <p slot="project-name">Project 10</p>
+                        <p slot="project-details">Project 10 details. Blah Blah Blah</p>
+                        <ul slot="project-issues">
+                            <li>issue 1</li>
+                            <li>issue 2</li>
+                            <li>issue 3</li>
+                            <li>issue 4</li>
+                            <li>issue 5</li>
                         </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 11</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
+                    </project-card>
+                    <project-card>
+                        <p slot="project-name">Project 11</p>
+                        <p slot="project-details">Project 11 details. Blah Blah Blah</p>
+                        <ul slot="project-issues">
+                            <li>issue 1</li>
+                            <li>issue 2</li>
+                            <li>issue 3</li>
+                            <li>issue 4</li>
+                            <li>issue 5</li>
                         </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 12</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
+                    </project-card>
+                    <project-card>
+                        <p slot="project-name">Project 12</p>
+                        <p slot="project-details">Project 12 details. Blah Blah Blah</p>
+                        <ul slot="project-issues">
+                            <li>issue 1</li>
+                            <li>issue 2</li>
+                            <li>issue 3</li>
+                            <li>issue 4</li>
+                            <li>issue 5</li>
                         </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 13</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
+                    </project-card>
+                    <project-card>
+                        <p slot="project-name">Project 13</p>
+                        <p slot="project-details">Project 13 details. Blah Blah Blah</p>
+                        <ul slot="project-issues">
+                            <li>issue 1</li>
+                            <li>issue 2</li>
+                            <li>issue 3</li>
+                            <li>issue 4</li>
+                            <li>issue 5</li>
                         </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 14</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
+                    </project-card>
+                    <project-card>
+                        <p slot="project-name">Project 14</p>
+                        <p slot="project-details">Project 14 details. Blah Blah Blah</p>
+                        <ul slot="project-issues">
+                            <li>issue 1</li>
+                            <li>issue 2</li>
+                            <li>issue 3</li>
+                            <li>issue 4</li>
+                            <li>issue 5</li>
                         </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 15</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
+                    </project-card>
+                    <project-card>
+                        <p slot="project-name">Project 15</p>
+                        <p slot="project-details">Project 15 details. Blah Blah Blah</p>
+                        <ul slot="project-issues">
+                            <li>issue 1</li>
+                            <li>issue 2</li>
+                            <li>issue 3</li>
+                            <li>issue 4</li>
+                            <li>issue 5                         </li>
                         </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 16</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 17</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 18</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 19</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 20</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 21</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 22</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 23</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 24</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 25</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 26</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 27</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 28</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 29</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 30</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 31</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 32</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 33</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 34</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 35</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 36</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 37</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 38</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 39</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h2>Card 40</h2>
-                        <ul>
-                            <li>sub-item 1</li>
-                            <li>sub-item 2</li>
-                            <li>sub-item 3</li>
-                            <li>sub-item 4</li>
-                        </ul>
-                    </div>
+                    </project-card>
                 </div>
             </main>
         </div>
         <script src="main.js" async defer></script>
+        <script src="card_template.js" async defer></script>
     </body>
 </html>
