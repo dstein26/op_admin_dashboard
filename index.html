@@ -13,11 +13,21 @@
             <link rel="stylesheet" href="card_style.css">
             <div class="card">
                 
-                <slot name="project-name"><h1>NO PROJECT NAME</h1></slot>
-                <h2>Project Details</h2>
-                <slot class="details slot" name="project-details"><span>NO PROJECT DETAILS</span></slot>
-                <h2>Current Issues</h2>
-                <slot class="issues slot" name="project-issues"><span>NO CURRENT ISSUES</span></slot>
+                <div class="wrapper">
+                    <slot name="project-name"><h1>NO PROJECT NAME</h1></slot>
+                </div>
+                <div class="wrapper">
+                    <h2>Project Details</h2>
+                </div>
+                <div class="wrapper details">
+                    <slot name="project-details"><span>NO PROJECT DETAILS</span></slot>
+                </div>
+                <div class="wrapper">
+                    <h2>Current Issues</h2>
+                </div>
+                <div class="wrapper issues">
+                    <span><slot name="project-issues"></slot></span>
+                </div>
             </div>
         </template>
 
@@ -44,170 +54,143 @@
             <header><h1>&#128513;My Header</h1></header>
             <main>
                 <div id="display-area">
+                    <!--
+                        Emmet: project-card*15>h1.project-name{Project $}+p.project-details{Details of project $. Blah blah blah}+.project-issues*5{Project issue $}
+                    -->
                     <project-card>
                         <h1 slot="project-name">Project 1</h1>
-                        <span slot="project-details">Project 1 details. Blah Blah Blah</span>
-                        <ul slot="project-issues">
-                            <li>issue 1</li>
-                            <li>issue 2</li>
-                            <li>issue 3</li>
-                            <li>issue 4</li>
-                            <li>issue 5</li>
-                        </ul>
+                        <p slot="project-details">Details of project 1. Blah blah blah</p>
+                        <div slot="project-issues">Project issue 1</div>
+                        <div slot="project-issues">Project issue 2</div>
+                        <div slot="project-issues">Project issue 3</div>
+                        <div slot="project-issues">Project issue 4</div>
+                        <div slot="project-issues">Project issue 5</div>
                     </project-card>
                     <project-card>
-                        <p slot="project-name">Project 2</p>
-                        <p slot="project-details">Project 2 details. Blah Blah Blah</p>
-                        <ul slot="project-issues">
-                            <li>issue 1</li>
-                            <li>issue 2</li>
-                            <li>issue 3</li>
-                            <li>issue 4</li>
-                            <li>issue 5</li>
-                        </ul>
+                        <h1 slot="project-name">Project 2</h1>
+                        <p slot="project-details">Details of project 2. Blah blah blah</p>
+                        <div slot="project-issues">Project issue 1</div>
+                        <div slot="project-issues">Project issue 2</div>
+                        <div slot="project-issues">Project issue 3</div>
+                        <div slot="project-issues">Project issue 4</div>
+                        <div slot="project-issues">Project issue 5</div>
                     </project-card>
                     <project-card>
-                        <p slot="project-name">Project 3</p>
-                        <p slot="project-details">Project 3 details. Blah Blah Blah</p>
-                        <ul slot="project-issues">
-                            <li>issue 1</li>
-                            <li>issue 2</li>
-                            <li>issue 3</li>
-                            <li>issue 4</li>
-                            <li>issue 5</li>
-                        </ul>
+                        <h1 slot="project-name">Project 3</h1>
+                        <p slot="project-details">Details of project 3. Blah blah blah</p>
+                        <div slot="project-issues">Project issue 1</div>
+                        <div slot="project-issues">Project issue 2</div>
+                        <div slot="project-issues">Project issue 3</div>
+                        <div slot="project-issues">Project issue 4</div>
+                        <div slot="project-issues">Project issue 5</div>
                     </project-card>
                     <project-card>
-                        <p slot="project-name">Project 4</p>
-                        <p slot="project-details">Project 4 details. Blah Blah Blah</p>
-                        <ul slot="project-issues">
-                            <li>issue 1</li>
-                            <li>issue 2</li>
-                            <li>issue 3</li>
-                            <li>issue 4</li>
-                            <li>issue 5</li>
-                        </ul>
+                        <h1 slot="project-name">Project 4</h1>
+                        <p slot="project-details">Details of project 4. Blah blah blah</p>
+                        <div slot="project-issues">Project issue 1</div>
+                        <div slot="project-issues">Project issue 2</div>
+                        <div slot="project-issues">Project issue 3</div>
+                        <div slot="project-issues">Project issue 4</div>
+                        <div slot="project-issues">Project issue 5</div>
                     </project-card>
                     <project-card>
-                        <p slot="project-name">Project 5</p>
-                        <p slot="project-details">Project 5 details. Blah Blah Blah</p>
-                        <ul slot="project-issues">
-                            <li>issue 1</li>
-                            <li>issue 2</li>
-                            <li>issue 3</li>
-                            <li>issue 4</li>
-                            <li>issue 5</li>
-                        </ul>
+                        <h1 slot="project-name">Project 5</h1>
+                        <p slot="project-details">Details of project 5. Blah blah blah</p>
+                        <div slot="project-issues">Project issue 1</div>
+                        <div slot="project-issues">Project issue 2</div>
+                        <div slot="project-issues">Project issue 3</div>
+                        <div slot="project-issues">Project issue 4</div>
+                        <div slot="project-issues">Project issue 5</div>
                     </project-card>
                     <project-card>
-                        <p slot="project-name">Project 6</p>
-                        <p slot="project-details">Project 6 details. Blah Blah Blah</p>
-                        <ul slot="project-issues">
-                            <li>issue 1</li>
-                            <li>issue 2</li>
-                            <li>issue 3</li>
-                            <li>issue 4</li>
-                            <li>issue 5</li>
-                        </ul>
+                        <h1 slot="project-name">Project 6</h1>
+                        <p slot="project-details">Details of project 6. Blah blah blah</p>
+                        <div slot="project-issues">Project issue 1</div>
+                        <div slot="project-issues">Project issue 2</div>
+                        <div slot="project-issues">Project issue 3</div>
+                        <div slot="project-issues">Project issue 4</div>
+                        <div slot="project-issues">Project issue 5</div>
                     </project-card>
                     <project-card>
-                        <p slot="project-name">Project 7</p>
-                        <p slot="project-details">Project 7 details. Blah Blah Blah</p>
-                        <ul slot="project-issues">
-                            <li>issue 1</li>
-                            <li>issue 2</li>
-                            <li>issue 3</li>
-                            <li>issue 4</li>
-                            <li>issue 5</li>
-                        </ul>
+                        <h1 slot="project-name">Project 7</h1>
+                        <p slot="project-details">Details of project 7. Blah blah blah</p>
+                        <div slot="project-issues">Project issue 1</div>
+                        <div slot="project-issues">Project issue 2</div>
+                        <div slot="project-issues">Project issue 3</div>
+                        <div slot="project-issues">Project issue 4</div>
+                        <div slot="project-issues">Project issue 5</div>
                     </project-card>
                     <project-card>
-                        <p slot="project-name">Project 8</p>
-                        <p slot="project-details">Project 8 details. Blah Blah Blah</p>
-                        <ul slot="project-issues">
-                            <li>issue 1</li>
-                            <li>issue 2</li>
-                            <li>issue 3</li>
-                            <li>issue 4</li>
-                            <li>issue 5</li>
-                        </ul>
+                        <h1 slot="project-name">Project 8</h1>
+                        <p slot="project-details">Details of project 8. Blah blah blah</p>
+                        <div slot="project-issues">Project issue 1</div>
+                        <div slot="project-issues">Project issue 2</div>
+                        <div slot="project-issues">Project issue 3</div>
+                        <div slot="project-issues">Project issue 4</div>
+                        <div slot="project-issues">Project issue 5</div>
                     </project-card>
                     <project-card>
-                        <p slot="project-name">Project 9</p>
-                        <p slot="project-details">Project 9 details. Blah Blah Blah</p>
-                        <ul slot="project-issues">
-                            <li>issue 1</li>
-                            <li>issue 2</li>
-                            <li>issue 3</li>
-                            <li>issue 4</li>
-                            <li>issue 5</li>
-                        </ul>
+                        <h1 slot="project-name">Project 9</h1>
+                        <p slot="project-details">Details of project 9. Blah blah blah</p>
+                        <div slot="project-issues">Project issue 1</div>
+                        <div slot="project-issues">Project issue 2</div>
+                        <div slot="project-issues">Project issue 3</div>
+                        <div slot="project-issues">Project issue 4</div>
+                        <div slot="project-issues">Project issue 5</div>
                     </project-card>
                     <project-card>
-                        <p slot="project-name">Project 10</p>
-                        <p slot="project-details">Project 10 details. Blah Blah Blah</p>
-                        <ul slot="project-issues">
-                            <li>issue 1</li>
-                            <li>issue 2</li>
-                            <li>issue 3</li>
-                            <li>issue 4</li>
-                            <li>issue 5</li>
-                        </ul>
+                        <h1 slot="project-name">Project 10</h1>
+                        <p slot="project-details">Details of project 10. Blah blah blah</p>
+                        <div slot="project-issues">Project issue 1</div>
+                        <div slot="project-issues">Project issue 2</div>
+                        <div slot="project-issues">Project issue 3</div>
+                        <div slot="project-issues">Project issue 4</div>
+                        <div slot="project-issues">Project issue 5</div>
                     </project-card>
                     <project-card>
-                        <p slot="project-name">Project 11</p>
-                        <p slot="project-details">Project 11 details. Blah Blah Blah</p>
-                        <ul slot="project-issues">
-                            <li>issue 1</li>
-                            <li>issue 2</li>
-                            <li>issue 3</li>
-                            <li>issue 4</li>
-                            <li>issue 5</li>
-                        </ul>
+                        <h1 slot="project-name">Project 11</h1>
+                        <p slot="project-details">Details of project 11. Blah blah blah</p>
+                        <div slot="project-issues">Project issue 1</div>
+                        <div slot="project-issues">Project issue 2</div>
+                        <div slot="project-issues">Project issue 3</div>
+                        <div slot="project-issues">Project issue 4</div>
+                        <div slot="project-issues">Project issue 5</div>
                     </project-card>
                     <project-card>
-                        <p slot="project-name">Project 12</p>
-                        <p slot="project-details">Project 12 details. Blah Blah Blah</p>
-                        <ul slot="project-issues">
-                            <li>issue 1</li>
-                            <li>issue 2</li>
-                            <li>issue 3</li>
-                            <li>issue 4</li>
-                            <li>issue 5</li>
-                        </ul>
+                        <h1 slot="project-name">Project 12</h1>
+                        <p slot="project-details">Details of project 12. Blah blah blah</p>
+                        <div slot="project-issues">Project issue 1</div>
+                        <div slot="project-issues">Project issue 2</div>
+                        <div slot="project-issues">Project issue 3</div>
+                        <div slot="project-issues">Project issue 4</div>
+                        <div slot="project-issues">Project issue 5</div>
                     </project-card>
                     <project-card>
-                        <p slot="project-name">Project 13</p>
-                        <p slot="project-details">Project 13 details. Blah Blah Blah</p>
-                        <ul slot="project-issues">
-                            <li>issue 1</li>
-                            <li>issue 2</li>
-                            <li>issue 3</li>
-                            <li>issue 4</li>
-                            <li>issue 5</li>
-                        </ul>
+                        <h1 slot="project-name">Project 13</h1>
+                        <p slot="project-details">Details of project 13. Blah blah blah</p>
+                        <div slot="project-issues">Project issue 1</div>
+                        <div slot="project-issues">Project issue 2</div>
+                        <div slot="project-issues">Project issue 3</div>
+                        <div slot="project-issues">Project issue 4</div>
+                        <div slot="project-issues">Project issue 5</div>
                     </project-card>
                     <project-card>
-                        <p slot="project-name">Project 14</p>
-                        <p slot="project-details">Project 14 details. Blah Blah Blah</p>
-                        <ul slot="project-issues">
-                            <li>issue 1</li>
-                            <li>issue 2</li>
-                            <li>issue 3</li>
-                            <li>issue 4</li>
-                            <li>issue 5</li>
-                        </ul>
+                        <h1 slot="project-name">Project 14</h1>
+                        <p slot="project-details">Details of project 14. Blah blah blah</p>
+                        <div slot="project-issues">Project issue 1</div>
+                        <div slot="project-issues">Project issue 2</div>
+                        <div slot="project-issues">Project issue 3</div>
+                        <div slot="project-issues">Project issue 4</div>
+                        <div slot="project-issues">Project issue 5</div>
                     </project-card>
                     <project-card>
-                        <p slot="project-name">Project 15</p>
-                        <p slot="project-details">Project 15 details. Blah Blah Blah</p>
-                        <ul slot="project-issues">
-                            <li>issue 1</li>
-                            <li>issue 2</li>
-                            <li>issue 3</li>
-                            <li>issue 4</li>
-                            <li>issue 5                         </li>
-                        </ul>
+                        <h1 slot="project-name">Project 15</h1>
+                        <p slot="project-details">Details of project 15. Blah blah blah</p>
+                        <div slot="project-issues">Project issue 1</div>
+                        <div slot="project-issues">Project issue 2</div>
+                        <div slot="project-issues">Project issue 3</div>
+                        <div slot="project-issues">Project issue 4</div>
+                        <div slot="project-issues">Project issue 5</div>
                     </project-card>
                 </div>
             </main>

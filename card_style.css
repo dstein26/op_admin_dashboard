@@ -1,4 +1,4 @@
-@import url('myResetCSS/myReset.css');
+/* @import url('myResetCSS/myReset.css'); */
 @import url(color.css);
 
 #card-template
@@ -7,8 +7,8 @@
 }
 
 .card{
-    /*background-color: var(--c1-50);*/
-    background-color: transparent;
+    background-color: var(--c1-50);
+    /*background-color: transparent; */
 
     margin:15px;
     border: 1px solid var(--c1-800);
@@ -46,11 +46,41 @@ h2
     font-weight: bold;
     text-decoration: underline;
     margin: 0.5rem 0 0.5rem 0;
-    padding: 0 5px;
 }
 
 
-::slotted(p)
+::slotted(*)
 {
-    background-color: pink;
+    display:inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    margin-left:5px;
+}
+
+::slotted(h1)
+{
+    text-decoration: underline;
+}
+
+.card > .wrapper
+{
+    padding: 0 0 0 10px;
+}
+
+.card > .wrapper:first-child
+{
+    background-color: var(--hightlight-color);
+    padding: 5px 0 10px 5px;
+}
+
+.issues ::slotted(*)::before
+{
+    content: '❌';
+    margin-right: 2px;;
+}
+
+.details ::slotted(*)::before
+{
+    content: '⇒';
+    margin-right: 2px;;
 }

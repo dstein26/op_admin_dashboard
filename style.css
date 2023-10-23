@@ -3,11 +3,6 @@
 
 :root
 {
-    --background-color: var(--c1-50);
-    --hightlight-color: var(--c1-700);
-    --border-color: var(--c1-600);
-    --text-on-highlight-color: white;
-    
     --sidebar-transition-time: 0.5s;
 
     --header-height: 5em;
