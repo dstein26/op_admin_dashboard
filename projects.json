@@ -1,0 +1,36 @@
+{
+	"projects":
+	[
+		{
+			"title":"OP_Calculator",
+			"description":"A reverse-polish notation calculator",
+			"issues":
+			[
+				"Make into a mobile app",
+				"Numbers can overflow the display area",
+				"Add additional math functions (log, acos, asin, atan2)"
+				"Make look better"
+			],
+			"link":""
+		},
+		{
+			"title":"Etch-A-Sketch",
+			"description":"A site where users can create pixel art",
+			"issues":
+			[
+				"Allow users to save images",
+				"Make the resolution changes smoother",
+				"Improve appearance on mobile"
+			],
+			"link":""
+		},
+		{
+			"title":"",
+			"description":"",
+			"issues":
+			[
+			],
+			"link":""
+		}
+	]
+}

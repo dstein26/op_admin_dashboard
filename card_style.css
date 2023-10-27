@@ -12,7 +12,7 @@
 
     margin:15px;
     border: 1px solid var(--c1-800);
-    box-shadow: 1px 1px 2px 1px black;
+    box-shadow: 1px 1px 2px 1px grey;
     border-radius:0.4rem;
     width:20rem;
     height:auto;
@@ -24,9 +24,9 @@
 
 .card:hover
 {
-    transform: scale(1.1);
+    /*transform: scale(1.1);*/
     transform-origin: top left;
-    box-shadow: 5px 5px 2px 2px black;
+    box-shadow:0px 0px 20px 2px var(--focus-color);
 }
 
 h1
@@ -55,6 +55,7 @@ h2
     box-sizing: border-box;
     width: 100%;
     margin-left:5px;
+	margin-bottom:0.5em;
 }
 
 ::slotted(h1)
@@ -71,6 +72,11 @@ h2
 {
     background-color: var(--hightlight-color);
     padding: 5px 0 10px 5px;
+}
+
+.issues
+{
+	margin-bottom: 1em;
 }
 
 .issues ::slotted(*)::before
