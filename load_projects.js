@@ -36,3 +36,10 @@ projects =
 		],
 		"")
 ];
+
+addEventListener("load", loadProjects);
+
+function loadProjects()
+{
+	console.log("Loading")
+}
