@@ -1,7 +1,7 @@
 :root
 {
 
-    /* Eucalyptus */
+    /* Eucalyptus
     --c1-50: #ecfdf8;
     --c1-100: #d1faed;
     --c1-200: #a7f3db;
@@ -12,10 +12,26 @@
     --c1-700: #047854;
     --c1-800: #065f43;
     --c1-900: #064e38;
-    --c1-950: #022c1f;
+    --c1-950: #022c1f; */
+	
+	/* Lochinvar */
+	--c1-50: rgb(239, 254, 251);
+	--c1-100: rgb(201, 254, 248);
+	--c1-200: rgb(148, 251, 240);
+	--c1-300: rgb(86 ,242 ,232);
+	--c1-400: rgb(35 ,222 ,215);
+	--c1-500: rgb(11 ,193 ,189);
+	--c1-600: rgb(5 ,150 ,150);
+	--c1-700: rgb(9 ,123 ,124);
+	--c1-800: rgb(13 ,95 ,98);
+	--c1-900: rgb(16 ,79 ,81);
+	--c1-950: rgb(2 ,46 ,49);
+
+
 
     --background-color: white;
     --hightlight-color: var(--c1-600);
     --border-color: var(--c1-800);
     --text-on-highlight-color: white;
+	--focus-color: var(--c1-200);
 }
