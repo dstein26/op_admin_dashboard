@@ -13,7 +13,7 @@
             <link rel="stylesheet" href="card_style.css">
             <div class="card">
                 
-                <div class="wrapper">
+                <div class="wrapper header">
                     <slot name="project-name"><h1>NO PROJECT NAME</h1></slot>
                 </div>
                 <div class="wrapper">
@@ -26,7 +26,10 @@
                     <h2>Current Issues</h2>
                 </div>
                 <div class="wrapper issues">
-                    <span><slot name="project-issues"></slot></span>
+                    <slot name="project-issues">NO LOGGED ISSUES</slot>
+                </div>
+                <div class="gh-icon">
+                    <slot name = "gh-link"></slot>
                 </div>
             </div>
         </template>
