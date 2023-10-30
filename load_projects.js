@@ -1,9 +1,24 @@
+// Custom HTML Element for project cards
+customElements.define("project-card",   
+    class extends HTMLElement{
+        constructor()
+        {
+            super();
+
+            const card_template = document.getElementById("card-template");
+            const card_content = card_template.content;
+            const shadowRoot = this.attachShadow({mode:"open"}).appendChild(card_content.cloneNode(true));
+            // this.appendChild(card_content.cloneNode(true));
+        }
+});
+
+// Class to store project information
 class Project 
 {
-	title;
-	details;
-	issues;
-	ghLink;
+	title;		// String
+	details;	// Array of Strings
+	issues;		// Array of strings
+	ghLink;		// String
 	
 	constructor(t="", d=[], i=[], l="")
 	{
@@ -14,7 +29,7 @@ class Project
 	}
 }
 
-
+// Array of project to generate cards for the dashboard
 projects = 
 [
 	new Project("Admin Dashboard",
@@ -47,8 +62,10 @@ projects =
 		"https://github.com/dstein26/op_etch_a_sketch")
 ];
 
+// Wait until DOM is loaded
 addEventListener("load", loadProjects);
 
+// Generate content
 function loadProjects()
 {
 	console.log("Loading")
