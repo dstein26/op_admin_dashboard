@@ -88,6 +88,15 @@ em
     }
 }
 
+.header-wrapper
+{
+	margin:0;
+	padding:0;
+	width:100%;
+	height:calc(3.5*var(--header-fs));
+	overflow:hidden;
+}
+
 #sidebar-header
 {
 	--font-size: var(--header-fs);
@@ -211,6 +220,10 @@ em
 }
 
 /* define icons */
+#sidebar-header
+{
+	--icon:url('Assets/feather.svg');
+}
 #sb-home
 {
 	--icon: url('Assets/home-circle.svg');
