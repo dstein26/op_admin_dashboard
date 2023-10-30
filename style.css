@@ -8,12 +8,34 @@
     --header-height: 5em;
 }
 
+@font-face
+{
+	font-family: PlayfairDisplay;
+	src: url('./Assets/Font/PlayfairDisplay-Regular.otf') format("open-type");
+}
+
+@font-face
+{
+	font-family: PlayfairDisplay;
+	font-weight: bold;
+	src: url('./Assets/Font/PlayfairDisplay-Regular.otf') format("open-type");
+}
+
+@font-face
+{
+	font-family: PlayfairDisplay;
+	font-style: italic;
+	src: url('./Assets/Font/PlayfairDisplay-Regular.otf') format("open-type");
+}
+
+
 html, body
 {
     height: 100%;
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
+	font-family: PlayfairDisplay;
 }
 
 header
