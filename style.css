@@ -38,6 +38,11 @@ html, body
 	font-family: PlayfairDisplay;
 }
 
+body *
+{
+	font-family: PlayfairDisplay;
+}
+
 header
 {
     /*
