@@ -31,6 +31,10 @@ main
 {
     box-sizing: border-box;
     grid-area:display;
+	
+	display: grid;
+	grid-template: 	'projects	announcements' 	50%
+					'projects	trending'		1fr / 1fr 25rem;
 }
 
 em
@@ -102,7 +106,7 @@ em
 	--font-size: var(--header-fs);
 	--height-multiplier:1;
 	
-    display: block;
+    project: block;
     overflow: hidden;
     margin-left:1rem;
     text-shadow: 2px 2px 3px var(--c1-950);
@@ -117,8 +121,9 @@ em
     }
 }
 
-#display-area
+#project-area
 {
+	grid-area: projects;
     display:flex;
     flex-wrap: wrap;
     height: 100%;
@@ -206,17 +211,34 @@ em
 	padding: 5px 0 5px 5px;
 }
 
-.card
+.not-wrapper
 {
-    height: 150px;
-    width: 150px;
-    margin:0.5em;
-    padding: 0.5em;
-    border: 1px solid var(--hightlight-color);
-    border-radius: 0.5em;
-    background-color: var(--background-color);
-    box-shadow: 2px 2px 5px 1px black;
-    overflow: hidden;
+	box-sizing:border-box;
+	height:100%;
+	width:100%;
+	padding: 10px;
+}
+
+.notifications
+{
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0px;
+	border:1px solid black;
+	border-radius: 10px;
+	
+	> h1
+	{
+		font-size: 1em;
+		font-weight: bold;
+		background-color: gray;
+	}
+	
+	> *
+	{
+		padding: 5px;
+	}
 }
 
 /* define icons */

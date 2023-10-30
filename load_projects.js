@@ -72,7 +72,7 @@ function loadProjects()
 {
 	console.log("Loading")
 
-	const displayArea = document.getElementById("display-area");
+	const displayArea = document.getElementById("project-area");
 	const projectCard = document.createElement("project-card");
 
 	const img = document.createElement("img");
