@@ -33,22 +33,31 @@ main
     grid-area:display;
 }
 
+em
+{
+	font-style: italic;
+}
+
 
 #dashboard
 {
 	height:100%;
     display:grid;
     grid-template: 'sidebar header'		var(--header-height)
-                    'sidebar display'   1fr / auto 1fr;  
+                    'sidebar display'   calc(100% - var(--header-height)) / auto 1fr;  
 }
 
 #sidebar
 {
 	--header-fs: 2.5rem;
     --button-fs: 1.2rem;
+	--width-multiplier: 1.7;
+	--height-multiplier: 1.7;
 	
     display:flex;
     flex-direction: column;
+	flex-wrap:wrap;
+	align-content:start;
     grid-area: sidebar;
     width: auto;
     padding:10px 0 5px 1%;
@@ -58,16 +67,19 @@ main
     z-index: 1;
     overflow: hidden;
 
-    max-width: 100%;
-    transition-property: max-width;
-    transition-duration: var(--sidebar-transition-time);
-    transition-delay: var(--sidebar-transition-time);
+    width: 15rem;
+
+    transition-property: width;
+    transition-duration: 1s;
+    transition-delay: 0
     transition-timing-function: ease-in-out;
 
-    >img
+    > img
     {
-        height: 2.5em;
-        width: 2.5em;
+        height: var(--header-fs, 2em);
+        width: var(--header-fs, 2em);
+		margin-left:2em;
+		filter:invert();
     }
 
     > .sidebar-content > :first-child
@@ -78,15 +90,20 @@ main
 
 #sidebar-header
 {
+	--font-size: var(--header-fs);
+	--height-multiplier:1;
+	
     display: block;
     overflow: hidden;
     margin-left:1rem;
     text-shadow: 2px 2px 3px var(--c1-950);
-    font-size: var(--header-fs);
+    font-size: var(--font-size);
+	
+	width:100%;
 
     > h1
     {
-        font-size: var(--header-fs);
+        font-size: var(--font-size);
         font-weight: bold;
     }
 }
@@ -104,28 +121,35 @@ main
     max-width:100%;
     overflow: hidden;
 
+/*
     transition-property: max-width;
     transition-duration: var(--sidebar-transition-time);
     transition-delay: 0;
     transition-timing-function: ease-out;
+*/
 }
 
 .sidebar-content
 {
+	width:100%;
+	box-sizing:border-box;
     display:flex;
     flex-direction: column;
     flex:1;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     margin:0;
 	padding-right:10px;
+
 }
 
 .sidebar-button
 {
+	--font-size: var(--button-fs);
+	
     display: flex;
     width:90%;
-    /* max-height:1.5em; */
-    box-sizing: border-box;
+    /* max-height:1.5em; 
+    box-sizing: border-box; */
     height:auto;
     
     text-align: left;
@@ -133,7 +157,7 @@ main
     border-radius: 1.3em;
     box-sizing: border-box;
     margin:5px 0 5px 1rem;
-    padding: 0.2em 0;
+    padding: 0; /* 0.2em 0; */
     overflow: hidden;
     background-color: var(--hightlight-color);
     font-size: var(--button-fs);
@@ -165,7 +189,7 @@ main
     display:inline-block;
     position: relative;
     content: var(--icon, url('./Assets/image-broken.svg'));
-    height:var(--button-fs, 1em);
+    height:var(--font-size, 1em);
     aspect-ratio: 1/1;
     justify-content: center;
     filter:invert();

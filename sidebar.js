@@ -1,11 +1,11 @@
 // Side-bar expansion
-const sidebar = document.getElementById("sidebar");
-const sidebarCollapsedWidth = "5rem";
+// const sidebar = document.getElementById("sidebar");
+// const sidebarCollapsedWidth = "5rem";
 const itemCollapsedWidth = "1.2rem";
 const sidebarTransitionTime = "0.5s";
 
 // Toggle sidebar so it loads compacted
-addEventListener('load', (e) => { expandSidebar(); });
+// addEventListener('load', (e) => { expandSidebar(); });
 
 sidebar.addEventListener('transitionend', (e) => { reportTransitionTime(e); });
 
@@ -17,25 +17,25 @@ function expandSidebar()
         /* sidebar.getElementsByClassName("sidebar-content")[0]
         .getElementsByTagName("ul")[0]
         .getElementsByTagName("li"); */
-    if (sidebar.style.maxWidth) // Expanding the sidebar
+    if (sidebar.style.width) // Expanding the sidebar
     {
         for(let ii = 0; ii < listItems.length; ii++)
         {
-            listItems[ii].style.maxWidth = null;
-            listItems[ii].style.transitionDelay = null;
+            listItems[ii].style.width = null;
+			listItems[ii].style.height = null;
         }
-        sidebar.style.maxWidth = null;
-        sidebar.style.transitionDelay = "0s";
+        sidebar.style.width = null;
     }
     else    // Compressing the sidebar
     {
         for(let ii = 0; ii < listItems.length; ii++)
         {
-            listItems[ii].style.maxWidth = itemCollapsedWidth;
-            listItems[ii].style.transitionDelay = sidebarTransitionTime;
+            listItems[ii].style.width = "calc(var(--width-multiplier)*var(--font-size))";
+			listItems[ii].style.height = "calc(var(--height-multiplier)*var(--font-size))";
+            // listItems[ii].style.transitionDelay = sidebarTransitionTime;
         }
-        sidebar.style.maxWidth = sidebarCollapsedWidth;
-        sidebar.style.transitionDelay = null;
+        sidebar.style.width = "calc(var(--width-multiplier)*var(--header-fs))";
+        // sidebar.style.transitionDelay = null;
     }
 
     transitionTimer = new Date().getTime();
