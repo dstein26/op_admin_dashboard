@@ -37,169 +37,35 @@
         <div id="dashboard">
             <div id="sidebar">
                 <img src="Assets/chevron-double-right.svg" onclick="expandSidebar()">
-                <div id="sidebar-header" class="sb-collapse" style="--icon:url('Assets/feather.svg')"><h1>Admin Dashboard</h1></div>
+                <!--div id="sidebar-header" class="sb-collapse" style="--icon:url('Assets/feather.svg')"><h1>Admin Dashboard</h1></div-->
                 <div class="sidebar-content">
                     <div class="sidebar-group">
-                        <button class="sidebar-button sb-collapse" style="--icon:url('Assets/home-circle.svg')"><p>Home</p></button>
-                        <button class="sidebar-button sb-collapse" style="--icon:url('Assets/account.svg')"><p>Profile</p></button>
-                        <button class="sidebar-button sb-collapse" style="--icon:url('Assets/message.svg')"><p>Messages</p></button>
-                        <button class="sidebar-button sb-collapse" style="--icon:url('Assets/history.svg')"><p>History</p></button>
-                        <button class="sidebar-button sb-collapse" style="--icon:url('Assets/clipboard-list-outline.svg')"><p>Tasks</p></button>
-                        <button class="sidebar-button sb-collapse" style="--icon:url('Assets/account-group.svg')"><p>Communities</p></button>
+                        <button id="sb-home" class="sidebar-button sb-collapse"><p>Home</p></button>
+                        <button id="sb-account" class="sidebar-button sb-collapse"><p>Profile</p></button>
+                        <button id="sb-message" class="sidebar-button sb-collapse"><p>Messages</p></button>
+                        <button id="sb-history" class="sidebar-button sb-collapse"><p>History</p></button>
+                        <button id="sb-tasks" class="sidebar-button sb-collapse"><p>Tasks</p></button>
+                        <button id="sb-community" class="sidebar-button sb-collapse"><p>Communities</p></button>
                     </div>
                     <div class="sidebar-group">
-                        <button class="sidebar-button sb-collapse" style="--icon:url('Assets/cog.svg')"><p>Settings</p></button>
-                        <button class="sidebar-button sb-collapse" style="--icon:url('Assets/face-agent.svg')"><p>Support</p></button>
-                        <button class="sidebar-button sb-collapse" style="--icon:url('Assets/shield-lock-outline.svg')"><p>Privacy</p></button>
+                        <button id="sb-settings" class="sidebar-button sb-collapse"><p>Settings</p></button>
+                        <button id="sb-support" class="sidebar-button sb-collapse"><p>Support</p></button>
+                        <button id="sb-privacy" class="sidebar-button sb-collapse"><p>Privacy</p></button>
                     </div>
                 </div>
             </div>
-            <header><h1>&#128513;My Header</h1></header>
+            <header>
+				<h1>&#128513;My Header</h1>
+			</header>
             <main>
                 <div id="display-area">
                     <!--
                         Emmet: project-card*15>h1.project-name{Project $}+p.project-details{Details of project $. Blah blah blah}+.project-issues*5{Project issue $}
                     -->
-                    <!--project-card>
-                        <h1 slot="project-name">Project 1</h1>
-                        <p slot="project-details">Details of project 1. Blah blah blah</p>
-                        <div slot="project-issues">Project issue 1</div>
-                        <div slot="project-issues">Project issue 2</div>
-                        <div slot="project-issues">Project issue 3</div>
-                        <div slot="project-issues">Project issue 4</div>
-                        <div slot="project-issues">Project issue 5</div>
-                    </project-card>
-                    <project-card>
-                        <h1 slot="project-name">Project 2</h1>
-                        <p slot="project-details">Details of project 2. Blah blah blah</p>
-                        <div slot="project-issues">Project issue 1</div>
-                        <div slot="project-issues">Project issue 2</div>
-                        <div slot="project-issues">Project issue 3</div>
-                        <div slot="project-issues">Project issue 4</div>
-                        <div slot="project-issues">Project issue 5</div>
-                    </project-card>
-                    <project-card>
-                        <h1 slot="project-name">Project 3</h1>
-                        <p slot="project-details">Details of project 3. Blah blah blah</p>
-                        <div slot="project-issues">Project issue 1</div>
-                        <div slot="project-issues">Project issue 2</div>
-                        <div slot="project-issues">Project issue 3</div>
-                        <div slot="project-issues">Project issue 4</div>
-                        <div slot="project-issues">Project issue 5</div>
-                    </project-card>
-                    <project-card>
-                        <h1 slot="project-name">Project 4</h1>
-                        <p slot="project-details">Details of project 4. Blah blah blah</p>
-                        <div slot="project-issues">Project issue 1</div>
-                        <div slot="project-issues">Project issue 2</div>
-                        <div slot="project-issues">Project issue 3</div>
-                        <div slot="project-issues">Project issue 4</div>
-                        <div slot="project-issues">Project issue 5</div>
-                    </project-card>
-                    <project-card>
-                        <h1 slot="project-name">Project 5</h1>
-                        <p slot="project-details">Details of project 5. Blah blah blah</p>
-                        <div slot="project-issues">Project issue 1</div>
-                        <div slot="project-issues">Project issue 2</div>
-                        <div slot="project-issues">Project issue 3</div>
-                        <div slot="project-issues">Project issue 4</div>
-                        <div slot="project-issues">Project issue 5</div>
-                    </project-card>
-                    <project-card>
-                        <h1 slot="project-name">Project 6</h1>
-                        <p slot="project-details">Details of project 6. Blah blah blah</p>
-                        <div slot="project-issues">Project issue 1</div>
-                        <div slot="project-issues">Project issue 2</div>
-                        <div slot="project-issues">Project issue 3</div>
-                        <div slot="project-issues">Project issue 4</div>
-                        <div slot="project-issues">Project issue 5</div>
-                    </project-card>
-                    <project-card>
-                        <h1 slot="project-name">Project 7</h1>
-                        <p slot="project-details">Details of project 7. Blah blah blah</p>
-                        <div slot="project-issues">Project issue 1</div>
-                        <div slot="project-issues">Project issue 2</div>
-                        <div slot="project-issues">Project issue 3</div>
-                        <div slot="project-issues">Project issue 4</div>
-                        <div slot="project-issues">Project issue 5</div>
-                    </project-card>
-                    <project-card>
-                        <h1 slot="project-name">Project 8</h1>
-                        <p slot="project-details">Details of project 8. Blah blah blah</p>
-                        <div slot="project-issues">Project issue 1</div>
-                        <div slot="project-issues">Project issue 2</div>
-                        <div slot="project-issues">Project issue 3</div>
-                        <div slot="project-issues">Project issue 4</div>
-                        <div slot="project-issues">Project issue 5</div>
-                    </project-card>
-                    <project-card>
-                        <h1 slot="project-name">Project 9</h1>
-                        <p slot="project-details">Details of project 9. Blah blah blah</p>
-                        <div slot="project-issues">Project issue 1</div>
-                        <div slot="project-issues">Project issue 2</div>
-                        <div slot="project-issues">Project issue 3</div>
-                        <div slot="project-issues">Project issue 4</div>
-                        <div slot="project-issues">Project issue 5</div>
-                    </project-card>
-                    <project-card>
-                        <h1 slot="project-name">Project 10</h1>
-                        <p slot="project-details">Details of project 10. Blah blah blah</p>
-                        <div slot="project-issues">Project issue 1</div>
-                        <div slot="project-issues">Project issue 2</div>
-                        <div slot="project-issues">Project issue 3</div>
-                        <div slot="project-issues">Project issue 4</div>
-                        <div slot="project-issues">Project issue 5</div>
-                    </project-card>
-                    <project-card>
-                        <h1 slot="project-name">Project 11</h1>
-                        <p slot="project-details">Details of project 11. Blah blah blah</p>
-                        <div slot="project-issues">Project issue 1</div>
-                        <div slot="project-issues">Project issue 2</div>
-                        <div slot="project-issues">Project issue 3</div>
-                        <div slot="project-issues">Project issue 4</div>
-                        <div slot="project-issues">Project issue 5</div>
-                    </project-card>
-                    <project-card>
-                        <h1 slot="project-name">Project 12</h1>
-                        <p slot="project-details">Details of project 12. Blah blah blah</p>
-                        <div slot="project-issues">Project issue 1</div>
-                        <div slot="project-issues">Project issue 2</div>
-                        <div slot="project-issues">Project issue 3</div>
-                        <div slot="project-issues">Project issue 4</div>
-                        <div slot="project-issues">Project issue 5</div>
-                    </project-card>
-                    <project-card>
-                        <h1 slot="project-name">Project 13</h1>
-                        <p slot="project-details">Details of project 13. Blah blah blah</p>
-                        <div slot="project-issues">Project issue 1</div>
-                        <div slot="project-issues">Project issue 2</div>
-                        <div slot="project-issues">Project issue 3</div>
-                        <div slot="project-issues">Project issue 4</div>
-                        <div slot="project-issues">Project issue 5</div>
-                    </project-card>
-                    <project-card>
-                        <h1 slot="project-name">Project 14</h1>
-                        <p slot="project-details">Details of project 14. Blah blah blah</p>
-                        <div slot="project-issues">Project issue 1</div>
-                        <div slot="project-issues">Project issue 2</div>
-                        <div slot="project-issues">Project issue 3</div>
-                        <div slot="project-issues">Project issue 4</div>
-                        <div slot="project-issues">Project issue 5</div>
-                    </project-card>
-                    <project-card>
-                        <h1 slot="project-name">Project 15</h1>
-                        <p slot="project-details">Details of project 15. Blah blah blah</p>
-                        <div slot="project-issues">Project issue 1</div>
-                        <div slot="project-issues">Project issue 2</div>
-                        <div slot="project-issues">Project issue 3</div>
-                        <div slot="project-issues">Project issue 4</div>
-                        <div slot="project-issues">Project issue 5</div>
-                    </project-card-->
                 </div>
             </main>
         </div>
         <script src="sidebar.js" async defer></script>
-        <script src="card_template.js" async defer></script>
-		<script src="./load_projects.js"></script>
+		<script src="load_projects.js"></script>
     </body>
 </html>
