@@ -21,8 +21,12 @@ projects =
 		["This Project", "For the ODIN Project", "An admin dashboard for an admin to track multiple projects"],
 		["Add More Projects","Add icons to projects", "Credit where icons came from", "Choose a better font",
 		"Sidebar animation is poor", "Sidebar header does not look good when sidebar compressed", "No header"],
-		""
+		"https://github.com/dstein26/op_admin_dashboard"
 	),
+	new Project("Sign Up Form",
+		["For the ODIN Project", "A sign-up form for a fake service. Practice using forms"],
+		["Icons sometimes display large"],
+		"https://github.com/dstein26/op_sign_up_form"),
 	new Project("Calculator",
 		["For the ODIN Project", "A reverse-polish notation calculator"],
 		[
@@ -31,7 +35,7 @@ projects =
 			"Add additional math functions (log, acos, asin, atan2)",
 			"Make look better"
 		],
-		""
+		"https://github.com/dstein26/op_rpn_calculator"
 	),
 	new Project("Etch-A-Sketch",
 		["For the ODIN Project", "A site where users can create pixel art"],
@@ -40,7 +44,7 @@ projects =
 			"Make the resolution changes smoother",
 			"Improve appearance on mobile"
 		],
-		"")
+		"https://github.com/dstein26/op_etch_a_sketch")
 ];
 
 addEventListener("load", loadProjects);
