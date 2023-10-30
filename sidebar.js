@@ -5,7 +5,7 @@ const itemCollapsedWidth = "1.2rem";
 const sidebarTransitionTime = "0.5s";
 
 // Toggle sidebar so it loads compacted
-// addEventListener('load', (e) => { expandSidebar(); });
+addEventListener('load', (e) => { expandSidebar(); });
 
 sidebar.addEventListener('transitionend', (e) => { reportTransitionTime(e); });
 
