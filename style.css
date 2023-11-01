@@ -132,8 +132,10 @@ main
 	overflow: hidden;
 	
 	display: grid;
-	grid-template:	'cards	announcements'
-					'cards	trending';
+	grid-template:	'cards	announcements' 	70%
+					'cards	trending'		1fr / 1fr 20rem;
+					
+	
 }
 
 #project-area
@@ -143,12 +145,12 @@ main
 	overflow-y: scroll;
 }
 
-#announcements
+#announcements-container
 {
 	grid-area: announcements;
 }
 
-#trending
+#trending-container
 {
 	grid-area: trending;
 }
@@ -158,11 +160,47 @@ main
 	box-sizing: border-box;
 	padding: 0.5em 5px;
 	
-	> *
-	{
-		border: 1px solid black;
-		height: 100%;
-	}
+}
+
+.notifications
+{
+	height: 100%;
+	box-sizing: border-box;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding:5px;
+	
+	display: flex;
+	flex-direction: column;
+}
+
+.notifications > :first-child
+{
+	border-bottom: 1px solid black;
+}
+
+.notification-list
+{
+	flex:1;
+	overflow-y: scroll;
+}
+
+
+
+.announcement
+{
+	border-bottom: 1px solid black;
+}
+
+.announcement > :first-child
+{
+	font-weight:bold;
+	margin: 0.2em 0 0.5em 0;
+}
+
+.announcement > :last-child
+{
+	margin-bottom: 1em;
 }
 
 button
