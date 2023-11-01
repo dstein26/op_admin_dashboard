@@ -37,24 +37,22 @@
         <div id="dashboard">
             <div id="sidebar">
                 <img src="Assets/chevron-double-right.svg" onclick="expandSidebar()">
-                <div class="header-wrapper">
-					<div id="sidebar-header" class="sb-collapse"><h1>Admin Dashboard</h1></div>
+				<div id="sidebar-header" class="sb-content"><h1>Admin Dashboard</h1></div>
+				<div class="group-wrapper">
+					<div class="sidebar-group">
+						<button id="sb-home" class="sidebar-button sb-content"><p>Home</p></button>
+						<button id="sb-account" class="sidebar-button sb-content"><p>Profile</p></button>
+						<button id="sb-message" class="sidebar-button sb-content"><p>Messages</p></button>
+						<button id="sb-history" class="sidebar-button sb-content"><p>History</p></button>
+						<button id="sb-tasks" class="sidebar-button sb-content"><p>Tasks</p></button>
+						<button id="sb-community" class="sidebar-button sb-content"><p>Communities</p></button>
+					</div>
+					<div class="sidebar-group">
+						<button id="sb-settings" class="sidebar-button sb-content"><p>Settings</p></button>
+						<button id="sb-support" class="sidebar-button sb-content"><p>Support</p></button>
+						<button id="sb-privacy" class="sidebar-button sb-content"><p>Privacy</p></button>
+					</div>
 				</div>
-                <div class="sidebar-content">
-                    <div class="sidebar-group">
-                        <button id="sb-home" class="sidebar-button sb-collapse"><p>Home</p></button>
-                        <button id="sb-account" class="sidebar-button sb-collapse"><p>Profile</p></button>
-                        <button id="sb-message" class="sidebar-button sb-collapse"><p>Messages</p></button>
-                        <button id="sb-history" class="sidebar-button sb-collapse"><p>History</p></button>
-                        <button id="sb-tasks" class="sidebar-button sb-collapse"><p>Tasks</p></button>
-                        <button id="sb-community" class="sidebar-button sb-collapse"><p>Communities</p></button>
-                    </div>
-                    <div class="sidebar-group">
-                        <button id="sb-settings" class="sidebar-button sb-collapse"><p>Settings</p></button>
-                        <button id="sb-support" class="sidebar-button sb-collapse"><p>Support</p></button>
-                        <button id="sb-privacy" class="sidebar-button sb-collapse"><p>Privacy</p></button>
-                    </div>
-                </div>
             </div>
             <header>
 				<h1>Welcome Daniel! &#128513;</h1>
@@ -65,12 +63,12 @@
                         Emmet: project-card*15>h1.project-name{Project $}+p.project-details{Details of project $. Blah blah blah}+.project-issues*5{Project issue $}
                     -->
                 </div>
-				<div class="not-wrapper" id="announcements">
+				<div class="notification-wrapper" id="announcements">
 					<div class="notifications">
 						<h1>Announcements</h1>
 					</div>
 				</div>
-				<div class="not-wrapper" id="trending">
+				<div class="notification-wrapper" id="trending">
 					<div class="notifications">
 						<h1>Trending</h1>
 					</div>
