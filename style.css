@@ -5,6 +5,8 @@
 {
     --sidebar-transition-time: 0.5s;
     --header-height: 5em;
+
+	--icon: url('Assets/image-broken-variant.svg');
 }
 
 @font-face
@@ -111,13 +113,14 @@ body *
 	flex:1;
 }
 
-.sb-content::before
+.icon::before
 {
 	display: inline-block;
-	height:var(--font-size);
-	width: var(--font-size);
+	height:var(--font-size, 1em);
+	width: var(--font-size, 1em);
 	content: var(--icon);
 	margin-right: 5px;
+	margin-left: 2px;
 }
 
 header
