@@ -9,26 +9,27 @@
 	--icon: url('Assets/image-broken-variant.svg');
 }
 
-@font-face
-{
-	font-family: PlayfairDisplay;
-	src: url('./Assets/Font/PlayfairDisplay-Regular.otf') format("open-type");
-}
 
 @font-face
 {
-	font-family: PlayfairDisplay;
+	font-family: Cardo;
+	src: url('./Assets/Font/Cardo-Regular.ttf');
+}
+
+
+@font-face
+{
+	font-family: Cardo;
 	font-weight: bold;
-	src: url('./Assets/Font/PlayfairDisplay-Regular.otf') format("open-type");
+	src: url('./Assets/Font/Cardo-Bold.ttf');
 }
 
 @font-face
 {
-	font-family: PlayfairDisplay;
+	font-family: Cardo;
 	font-style: italic;
-	src: url('./Assets/Font/PlayfairDisplay-Regular.otf') format("open-type");
+	src: url('./Assets/Font/Cardo-Italic.ttf');
 }
-
 
 html, body
 {
@@ -36,12 +37,12 @@ html, body
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
-	font-family: PlayfairDisplay;
+	font-family: Cardo;
 }
 
 body *
 {
-	font-family: PlayfairDisplay;
+	font-family: Cardo;
 }
 
 #dashboard
@@ -74,6 +75,7 @@ body *
 	{
 		height: var(--img-size);
 		width: var(--img-size);
+		filter: invert();
 	}
 }
 
@@ -192,7 +194,7 @@ main
 
 .notifications > h1
 {
-	font-size: 1.2rem;
+	font-size: 1.5em;
 	font-weight: bold;
 	
 }
@@ -213,6 +215,7 @@ main
 .announcement
 {
 	border-bottom: 1px solid black;
+	padding: 5px 10px;
 }
 
 .announcement > :first-child
@@ -224,6 +227,14 @@ main
 .announcement > :last-child
 {
 	margin-bottom: 1em;
+}
+
+.announcement > h1
+{
+	font-weight: bold;
+	font-size: 1.2em;
+	text-transform:capitalize;
+	border-bottom: 3px double black;
 }
 
 button
