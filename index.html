@@ -37,20 +37,20 @@
         <div id="dashboard">
             <div id="sidebar">
                 <button onclick="expandSidebar()"><img src="Assets/chevron-double-right.svg"></button>
-				<div id="sidebar-header" class="icon sb-content"><h1>Admin Dashboard</h1></div>
+				<div id="sidebar-header" class="icon sb-content sb-collapse"><h1>Admin Dashboard</h1></div>
 				<div class="group-wrapper">
 					<div class="sidebar-group">
-						<button id="sb-home" class="icon sidebar-button sb-content"><p>Home</p></button>
-						<button id="sb-account" class="icon sidebar-button sb-content"><p>Profile</p></button>
-						<button id="sb-message" class="icon sidebar-button sb-content"><p>Messages</p></button>
-						<button id="sb-history" class="icon sidebar-button sb-content"><p>History</p></button>
-						<button id="sb-tasks" class="icon sidebar-button sb-content"><p>Tasks</p></button>
-						<button id="sb-community" class="icon sidebar-button sb-content"><p>Communities</p></button>
+						<button id="sb-home" class="icon sb-collapse sidebar-button sb-content"><p>Home</p></button>
+						<button id="sb-account" class="icon sb-collapse sidebar-button sb-content"><p>Profile</p></button>
+						<button id="sb-message" class="icon sb-collapse sidebar-button sb-content"><p>Messages</p></button>
+						<button id="sb-history" class="icon sb-collapse sidebar-button sb-content"><p>History</p></button>
+						<button id="sb-tasks" class="icon sb-collapse sidebar-button sb-content"><p>Tasks</p></button>
+						<button id="sb-community" class="icon sb-collapse sidebar-button sb-content"><p>Communities</p></button>
 					</div>
 					<div class="sidebar-group">
-						<button id="sb-settings" class="icon sidebar-button sb-content"><p>Settings</p></button>
-						<button id="sb-support" class="icon sidebar-button sb-content"><p>Support</p></button>
-						<button id="sb-privacy" class="icon sidebar-button sb-content"><p>Privacy</p></button>
+						<button id="sb-settings" class="icon sb-collapse sidebar-button sb-content"><p>Settings</p></button>
+						<button id="sb-support" class="icon sb-collapse sidebar-button sb-content"><p>Support</p></button>
+						<button id="sb-privacy" class="icon sb-collapse sidebar-button sb-content"><p>Privacy</p></button>
 					</div>
 				</div>
             </div>
@@ -103,7 +103,7 @@
 				</div>
             </main>
         </div>
-        <!--script src="sidebar.js" async defer></script-->
+        <script src="sidebar.js" async defer></script>
 		<script src="load_projects.js"></script>
     </body>
 </html>

@@ -61,6 +61,9 @@ body *
 	--header-fs: 2rem;
 	--text-fs: 1.1rem;
 	--img-size: 3rem;
+
+	--button-mult: 1.7;
+	--header-mult: 1;
 	
 	grid-area: sidebar;
 	
@@ -93,6 +96,8 @@ body *
 #sidebar-header
 {
 	--font-size: var(--header-fs);
+	--width-multiplier: var(--header-mult);
+	--height-multiplier: var(--header-mult);
 	
 	font-size: var(--font-size);
 	font-weight: bold;
@@ -100,6 +105,8 @@ body *
 	margin: 0 10px 10px 10px;
 
 	border-bottom: 4px double var(--sb-text-color);
+
+	overflow: hidden;
 }
 
 .group-wrapper
@@ -112,6 +119,8 @@ body *
 .sidebar-group
 {
 	--font-size: var(--text-fs);
+	--width-multiplier: var(--button-mult);
+	--height-multiplier: var(--button-mult);
 	
 	font-size: var(--font-size);
 	
@@ -122,6 +131,7 @@ body *
 	> button
 	{
 		margin: 5px;
+		overflow:hidden;
 	}
 }
 
@@ -133,6 +143,9 @@ body *
 .icon::before
 {
 	display: inline-block;
+	position: relative;
+	top: 4px;
+	right: 3px;
 	height:var(--font-size, 1em);
 	width: var(--font-size, 1em);
 	content: var(--icon);
