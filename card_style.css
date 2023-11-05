@@ -1,3 +1,10 @@
 /* @import url('myResetCSS/myReset.css'); */
 @import url(color.css);
 
+.card
+{
+    border: 1px solid black;
+
+    width: 20rem;
+    margin: 1rem;
+}
