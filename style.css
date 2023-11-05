@@ -59,7 +59,7 @@ body *
 #sidebar
 {
 	--header-fs: 2rem;
-	--text-fs: 1rem;
+	--text-fs: 1.1rem;
 	--img-size: 3rem;
 	
 	grid-area: sidebar;
@@ -77,6 +77,12 @@ body *
 		width: var(--img-size);
 		filter: invert();
 	}
+
+	> button
+	{
+		margin: 1rem;
+		width: fit-content;
+	}
 }
 
 #sidebar p, #sidebar h1
@@ -91,7 +97,9 @@ body *
 	font-size: var(--font-size);
 	font-weight: bold;
 
-	margin: 0 0 10px 10px;
+	margin: 0 10px 10px 10px;
+
+	border-bottom: 4px double var(--sb-text-color);
 }
 
 .group-wrapper
@@ -246,11 +254,12 @@ button
 {
 	border-radius: 50vh;
 	text-align: left;
+	font-size: var(--font-size, 1rem);
 
 	background-color: var(--button-bg-color);
 	color: var(--button-text-color);
-	/* border: 1px solid var(--button-bg-color); */
-	border: none;
+	border: 1px solid var(--button-bg-color);
+	/* border: none; */
 }
 
 button:hover
