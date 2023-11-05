@@ -229,12 +229,17 @@ main
 	margin-bottom: 1em;
 }
 
-.announcement > h1
+.announcement summary
 {
 	font-weight: bold;
 	font-size: 1.2em;
 	text-transform:capitalize;
 	border-bottom: 3px double black;
+}
+
+.announcement p
+{
+	font-weight: normal;
 }
 
 button
