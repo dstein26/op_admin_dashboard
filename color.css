@@ -35,4 +35,9 @@
     --button-bg-color: var(--c1-600);
     --button-text-color: white;
     --button-hover-color: linear-gradient(45deg, var(--c1-600) 0%, var(--c1-600) 50%, var(--c1-200) 100%);
+	
+	--card-bg-color: var(--da-bg-color);
+	--card-text-color: black;
+	--card-header-bg-color: var(--sb-bg-color);
+	--card-header-text-color: var(--sb-text-color);
 }
