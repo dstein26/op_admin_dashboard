@@ -14,7 +14,7 @@
             <div class="card">
                 
                 <div class="wrapper header">
-                    <slot name="project-icon"><img src="Assests/image-broken.svg"></slot>
+                    <slot name="project-icon"><img src="./Assets/image-broken.svg"></slot>
 					<slot name="project-name"><h1>NO PROJECT NAME</h1></slot>
                 </div>
                 <div class="wrapper">
@@ -29,8 +29,10 @@
                 <div class="wrapper issues">
                     <slot name="project-issues">NO LOGGED ISSUES</slot>
                 </div>
-                <div class="gh-icon">
+                <div class="wrapper footer">
                     <slot name = "gh-link"></slot>
+					<img class="addIssue" src="Assets/plus.svg">
+					<img class="addIssue" src="Assets/eye-plus.svg">
                 </div>
             </div>
         </template>

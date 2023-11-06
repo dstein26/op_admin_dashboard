@@ -77,7 +77,7 @@ function loadProjects()
 
 	const img = document.createElement("img");
 	img.setAttribute("src", "Assets/github-mark-white.svg");
-	img.setAttribute("style", "height:90%; margin: 5% 5px 5% 0;");
+	img.setAttribute("style", "height:90%;"); // margin: 5% 5px 5% 0;");
 
 	const ghLink = document.createElement("a");
 	ghLink.appendChild(img);

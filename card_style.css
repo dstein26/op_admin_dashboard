@@ -36,9 +36,36 @@
 	border-bottom: 5px groove var(--c2-400);
 }
 
+.header ::slotted(img), .header img
+{
+	height: 2rem;
+	display: inline-block;
+}
+
+.footer
+{
+	/* height: 2rem; */
+	padding: 0.1rem;
+	background-color:var(--card-header-bg-color);
+	box-sizing: border-box;
+	width:100%;
+	height: 2rem;
+	
+	display: flex;
+	flex-direction:row-reverse;
+	justify-content: right;
+}
+
+.footer img
+{
+	height:90%;
+	margin: 0 0.2rem;
+	filter: invert();
+}
+
 header > ::slotted(*)
 {
-	display: inline;
+	display: inline-block;
 }
 
 h2
