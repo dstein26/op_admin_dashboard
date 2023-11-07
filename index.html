@@ -63,8 +63,10 @@
 					<input type="text" name="search" placeholder="Search...">
 				</div>
 				<div id="welcome">
-					<p> Welcome back</p>
-					<h1>Daniel S!</h1>
+					<div class="wrapper avatar user">
+						<p> Welcome back</p>
+						<h1>Daniel S!</h1>
+					</div>
 				</div>
 				<div id="user">
 					<img src="Assets/bell-ring.svg">
@@ -81,6 +83,12 @@
                     <!--
                         Emmet: project-card*15>h1.project-name{Project $}+p.project-details{Details of project $. Blah blah blah}+.project-issues*5{Project issue $}
                     -->
+					<project-card>
+						<h1 slot="project-name">Credits</h1>
+						<p slot="project-details">Icons from: <a href='https://pictogrammers.com/'>Pictogrammers</a></p>
+						<p slot="project-details">Color themes from: <a href='https://uicolors.app/create'>Tailwind</a></p>
+						<p slot="project-details">Avatars from: <a href='https://robohash.org/'>RoboHash</a></p>
+					</project-card>
                 </div>
 				<div class="notification-wrapper" id="announcement-container">
 					<div class="notifications">

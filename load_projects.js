@@ -59,9 +59,7 @@ projects =
 			"Make the resolution changes smoother",
 			"Improve appearance on mobile"
 		],
-		"https://github.com/dstein26/op_etch_a_sketch"),
-	new Project("<em>Credits</em>",
-		["Icons from: <a href='https://pictogrammers.com/'>Pictogrammers</a>", "Color themes from: <a href='https://uicolors.app/create'>Tailwind</a>"])
+		"https://github.com/dstein26/op_etch_a_sketch")
 ];
 
 // Wait until DOM is loaded
