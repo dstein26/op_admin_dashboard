@@ -7,6 +7,7 @@
     --header-height: 7rem;
 
 	--icon: url('Assets/image-broken-variant.svg');
+	--avatar: url('Assets/Avatars/Default_Avatar.png');
 }
 
 
@@ -154,6 +155,30 @@ body *
 	filter: invert();
 }
 
+.av-size-large
+{
+	--im-size: 2em;
+}
+
+.av-size-small
+{
+	--im-size: 1.2em;
+}
+
+.avatar::before
+{
+	height: var(--im-size, 1em);
+	width: var(--im-size, 1em);
+	display:inline-block;
+	background-color: var(--fav-color, white);
+	background-image: var(--avatar);
+	background-size: 100% 100%;
+	content: "";
+	border-radius: 50%;
+	overflow:hidden;
+	
+}
+
 header
 {
 	grid-area: header;
@@ -218,6 +243,12 @@ main
 #welcome
 {
 	grid-area: welcome;
+}
+
+#welcome
+{
+	display: flex;
+	flex-direction: row;
 }
 
 #user
@@ -304,6 +335,11 @@ main
 	font-weight: normal;
 }
 
+.inline
+{
+	display: inline-block;
+}
+
 button
 {
 	border-radius: 50vh;
@@ -362,4 +398,11 @@ button:hover
 #sb-privacy
 {
 	--icon:url('Assets/shield-lock-outline.svg');
+}
+
+/* Avatars */
+.user
+{
+	--avatar: url("Assets/Avatars/2600_387_f_5f16__8.png");
+	--fav-color: green;
 }
