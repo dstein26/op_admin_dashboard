@@ -4,7 +4,7 @@
 :root
 {
     --sidebar-transition-time: 0.5s;
-    --header-height: 5em;
+    --header-height: 7rem;
 
 	--icon: url('Assets/image-broken-variant.svg');
 }
@@ -158,6 +158,17 @@ header
 {
 	grid-area: header;
 	border-bottom: 5px groove var(--c2-400);
+	
+	display: grid;
+	grid-template: 	'search 	user'		50%
+					'welcome	buttons'	1fr / 1fr auto;
+					
+	font-weight: bold;
+}
+
+header h1
+{
+	font-size: larger;
 }
 
 main
@@ -192,6 +203,36 @@ main
 #trending-container
 {
 	grid-area: trending;
+}
+
+#search
+{
+	grid-area: search;
+}
+
+#search img
+{
+	height: 1.5em;
+}
+
+#welcome
+{
+	grid-area: welcome;
+}
+
+#user
+{
+	grid-area: user;
+}
+
+#user img
+{
+	height: 1.5em;
+}
+
+#header-buttons
+{
+	grid-area: buttons;
 }
 
 .notification-wrapper
